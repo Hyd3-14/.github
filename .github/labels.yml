@@ -1,0 +1,143 @@
+- name: 'type: feature'
+  color: '0969da'
+  description: '新機能または機能追加'
+  aliases:
+    - '【種別】新機能'
+    - 'enhancement'
+    - 'feature'
+    - 'Type: Feature'
+
+- name: 'type: bug'
+  color: 'd73a4a'
+  description: '不具合修正'
+  aliases:
+    - '【種別】バグ'
+    - 'bug'
+    - 'Type: Bug'
+
+- name: 'type: chore'
+  color: '8b949e'
+  description: '保守、設定、運用改善'
+  aliases:
+    - '【種別】雑務'
+    - 'chore'
+    - 'Type: Chore'
+
+- name: 'type: docs'
+  color: '1f883d'
+  description: 'ドキュメント変更'
+  aliases:
+    - '【種別】ドキュメント'
+    - 'documentation'
+    - 'Type: Doc'
+
+- name: 'type: question'
+  color: 'd93f0b'
+  description: '質問、相談、仕様確認'
+  aliases:
+    - '【種別】議論・質問'
+    - 'question'
+    - 'help wanted'
+    - 'Type: Question'
+
+- name: 'priority: critical'
+  color: '000000'
+  description: '最優先で対応が必要'
+  aliases:
+    - '【優先度】至急'
+    - 'Prio: Critical'
+
+- name: 'priority: high'
+  color: 'b60205'
+  description: '優先度が高い'
+  aliases:
+    - '【優先度】高'
+    - 'Prio: High'
+
+- name: 'priority: low'
+  color: 'c2e0c6'
+  description: '余裕があれば対応'
+  aliases:
+    - '【優先度】低'
+    - 'Prio: Low'
+
+- name: 'size: s'
+  color: '2da44e'
+  description: '小さな変更'
+  aliases:
+    - '【規模】S (〜1h)'
+    - 'good first issue'
+
+- name: 'size: m'
+  color: 'bf8700'
+  description: 'まとまった時間が必要'
+  aliases:
+    - '【規模】M (半日〜1日)'
+
+- name: 'size: l'
+  color: 'cf222e'
+  description: '分割を検討したいサイズ'
+  aliases:
+    - '【規模】L (2日〜)'
+
+- name: 'area: frontend'
+  color: 'c2e0c6'
+  description: 'UI、UX、client-side'
+  aliases:
+    - '【領域】フロント'
+    - 'Comp: Frontend'
+
+- name: 'area: backend'
+  color: 'c5def5'
+  description: 'API、DB、server-side'
+  aliases:
+    - '【領域】バックエンド'
+    - 'Comp: Backend'
+
+- name: 'area: infra'
+  color: 'd4c5f9'
+  description: 'CI/CD、クラウド、開発基盤'
+  aliases:
+    - '【領域】インフラ'
+    - 'Comp: Infra'
+
+- name: 'area: security'
+  color: 'b60205'
+  description: 'セキュリティ、秘密情報、脆弱性対応'
+  aliases:
+    - 'Comp: Security'
+
+- name: 'status: review'
+  color: 'fbca04'
+  description: 'レビュー待ち、確認待ち'
+  aliases:
+    - '【状態】レビュー中'
+    - 'Status: Review'
+
+- name: 'status: blocked'
+  color: '333333'
+  description: '外部要因または判断待ちで停止中'
+  aliases:
+    - '【状態】保留・ブロック'
+    - 'Status: Blocked'
+
+- name: 'status: wontfix'
+  color: 'ffffff'
+  description: '対応不要、重複、再現せず'
+  aliases:
+    - '【状態】対応不要'
+    - 'wontfix'
+    - 'invalid'
+    - 'duplicate'
+    - "Status: Won't Do"
+
+- name: 'risk: supply-chain'
+  color: 'fbca04'
+  description: '依存関係、配布経路、外部アクションに関するリスク'
+
+- name: 'action: manual-setup'
+  color: '6f42c1'
+  description: 'pull 後または merge 後に手動対応が必要'
+  aliases:
+    - '【注意】手動対応あり'
+    - 'Action: Manual Setup'

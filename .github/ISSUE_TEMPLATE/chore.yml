@@ -1,0 +1,34 @@
+name: Chore
+description: 設定変更、依存更新、リファクタ、文書更新などを起票する
+labels: ['type: chore']
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: 作業カテゴリ
+      options:
+        - Refactoring
+        - Documentation
+        - Dependencies
+        - CI/CD
+        - Tests
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 作業詳細
+      value: |
+        ## 背景
+        <!-- なぜ必要か -->
+
+        ## 変更内容
+        <!-- 何を変えるか -->
+
+        ## 完了条件
+        - [ ]
+        - [ ]
+    validations:
+      required: true

@@ -1,0 +1,35 @@
+name: Bug report
+description: バグ・不具合を起票する
+labels: ['type: bug']
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 重要度
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: バグ詳細
+      value: |
+        ## 概要
+        <!-- 何が起きているか -->
+
+        ## 再現手順
+        1.
+        2.
+
+        ## 期待する動作
+        <!-- 本来どうなるべきか -->
+
+        ## ログ / スクリーンショット
+        <!-- 必要なら添付 -->
+    validations:
+      required: true
