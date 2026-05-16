@@ -1,0 +1,45 @@
+{
+  "name": "push-hygiene-unity",
+  "target": "push",
+  "enforcement": "disabled",
+  "conditions": {
+    "ref_name": {
+      "include": [
+        "~ALL"
+      ],
+      "exclude": []
+    }
+  },
+  "rules": [
+    {
+      "type": "file_path_restriction",
+      "parameters": {
+        "restricted_file_paths": [
+          "**/Library/**",
+          "**/Temp/**",
+          "**/Obj/**",
+          "**/Logs/**",
+          "**/UserSettings/**",
+          "**/Build/**",
+          "**/Builds/**"
+        ]
+      }
+    },
+    {
+      "type": "file_extension_restriction",
+      "parameters": {
+        "restricted_file_extensions": [
+          ".unitypackage",
+          ".apk",
+          ".aab",
+          ".exe",
+          ".dll",
+          ".pdb",
+          ".mp4",
+          ".mov",
+          ".zip"
+        ]
+      }
+    }
+  ]
+}
