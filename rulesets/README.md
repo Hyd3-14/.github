@@ -44,6 +44,36 @@ GitHub UI では、対象 repository の Settings から Rulesets を開き、ru
 
 このディレクトリの example JSON は標準雛形です。実適用時に UI が異なる形式を出す場合は、UI export と公式 docs を優先して雛形を更新します。
 
+## sync script
+
+API で同期する場合は、先に dry-run で対象 repo と ruleset 名を確認します。
+
+```sh
+scripts/sync-ruleset.py \
+  --owner Hyd3-14 \
+  --repo example \
+  --ruleset rulesets/branch-main-light.example.json \
+  --dry-run
+```
+
+実際に GitHub API へ create / update する場合は、`GITHUB_TOKEN` を設定して `--no-dry-run` を明示します。
+
+```sh
+GITHUB_TOKEN=... scripts/sync-ruleset.py \
+  --owner Hyd3-14 \
+  --repo example \
+  --ruleset rulesets/branch-main-light.example.json \
+  --no-dry-run
+```
+
+`gh auth login` 済みの環境では shell 版も使えます。
+
+```sh
+scripts/sync-ruleset.sh Hyd3-14 example rulesets/branch-main-light.example.json
+```
+
+sync script は同名 ruleset があれば update、なければ create します。delete、legacy branch protection の編集、既存 repository settings の破壊的変更は行いません。example JSON は `enforcement: disabled` なので、同期後に内容を確認してから GitHub UI または API で `active` に切り替えます。
+
 ## 注意
 
 - example JSON は `disabled` なので、適用後に明示的に `active` へ切り替える。
