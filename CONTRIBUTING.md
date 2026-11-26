@@ -1,30 +1,30 @@
 # Contributing
 
-このアカウント配下のリポジトリでは、小さく可逆な変更を優先します。
+Repositories under this account prefer small, reversible changes.
 
-## Issue
+## Issues
 
-- 実装や修正は、原則として Issue を起点にします
-- Issue title には `[Bug]:` や `[Chore]:` のような prefix を付けず、内容が分かる自然なタイトルにします
-- 種別は title ではなく `type: *` ラベルで表します
+- Work starts from an Issue, in principle
+- Issue titles carry no prefix such as `[Bug]:` or `[Chore]:`; use a natural title that describes the content
+- The kind is expressed with a `type: *` label, not in the title
 
-## Pull Request
+## Pull Requests
 
-- PR には対応 Issue への `closes #<issue>` を入れます
-- 変更範囲に応じた確認手順を PR に残します
-- 少なくとも 1 つの `type: *` ラベルを付けます
-- workflow 追加・更新時は action の SHA pinning と最小権限を確認します
+- Include `closes #<issue>` for the corresponding Issue
+- Leave the verification steps appropriate to the change in the PR
+- Apply at least one `type: *` label
+- When adding or updating a workflow, check SHA pinning of actions and minimal permissions
 
-## ラベル
+## Labels
 
-ラベル名は英語、description は日本語を標準にします。
+Label names are in English; descriptions are in Japanese by default.
 
-- `type: feature`: 新機能または機能追加
-- `type: bug`: 不具合修正
-- `type: chore`: 保守、設定、運用改善
-- `type: docs`: ドキュメント変更
-- `type: question`: 質問、相談、仕様確認
+- `type: feature`: a new feature or a feature addition
+- `type: bug`: a bug fix
+- `type: chore`: maintenance, configuration, operational improvement
+- `type: docs`: a documentation change
+- `type: question`: a question, consultation, or specification check
 
-## 秘密情報
+## Secrets
 
-token、secret、個人情報、内部情報はコミットしないでください。脆弱性や秘密情報に関わる内容は公開 Issue では扱わず、`SECURITY.md` の方針に従います。
+Never commit tokens, secrets, personal information, or internal information. Topics involving vulnerabilities or secrets are not handled in public Issues; follow the policy in `SECURITY.md`.
